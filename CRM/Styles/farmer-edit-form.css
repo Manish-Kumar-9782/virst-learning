@@ -95,3 +95,23 @@
 #farmer-address-line{
     width: 270pt;
 }
+
+
+#farmer-profile-content-submit{
+    position: relative;
+    margin: 10px;
+    padding: auto;
+    align-items: center;
+    width: 100px;
+    left: 40%;
+    background-color: var(--rarified-air);
+}
+
+#farmer-profile-content-submit:hover , #farmer-profile-content-submit:focus, #farmer-profile-content-submit:active{
+    background-color: var(--azure-green-blue);
+    color: var(--rarified-air);
+    border: 10px groove var(--rarified-air);
+    border-color: var(--rarified-air);
+    outline: 0px solid;
+    outline-color: var(--rarified-air);
+}

@@ -1,0 +1,60 @@
+@import url(colors.css);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--water-music);
+    background-image: url(../Images/background1.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+}
+
+#login-main-flex-container{
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(50%);
+    background-color: rgba(245, 245, 245, 0.242);
+}
+
+#dream-kisan-logo{
+    font-size: 7em;
+    color: rgb(78, 106, 135);
+}
+
+#login-card-container{
+    border: 1px solid var(--modern-ivary);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    background-color: var(--moder-ivary-low);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#login-card-container h1{
+    color: var(--azure-green-blue);
+}
+
+#forget-password{
+    text-decoration: none;
+    color: var(--azure-green-blue);
+}
+
+#login-card-container *{
+    margin: 10px 20px;
+    padding: 8px;
+}
+
+#login-card-container #submit-button{
+    width: 30%;
+    align-self: left;
+}
