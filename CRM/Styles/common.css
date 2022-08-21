@@ -1,0 +1,12 @@
+.large{
+    font-size: 2em;
+    
+}
+
+.merge{
+    display: inline-block;
+    border: 1px solid inherit;
+    border-collapse: collapse;
+    margin-right: 0px;
+    padding: 0px;
+}

@@ -1,0 +1,97 @@
+@import url(colors.css);
+
+#farmer-edit-form-main-container{
+    color: aliceblue;
+    background-color: var(--azure-green-blue);
+    width: fit-content;
+    border: 10px groove var(--azure-green-blue);
+    padding: 5px 20px 20px 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#farmer-profile-form input, #farmer-profile-form select{
+    padding: 5px;
+    border: 1px solid whitesmoke;
+}
+
+#farmer-profile-form input:hover, #farmer-profile-form select:hover{
+    border: 1px solid var(--ruby-dust);
+}
+
+/* #farmer-profile-form input:focus-visible, #farmer-profile-form select:focus{
+    border: 1px solid red;
+} */
+
+#farmer-profile-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+#farmer-edit-profile-close-button{
+    text-align: center;
+    padding: auto;
+    border: 0px;
+    background-color: inherit;
+    color: wheat;
+}
+
+#farmer-edit-profile-close-button:hover{
+    text-align: center;
+    color: lightblue;
+    border: 1px ridge;
+    box-shadow: outset 3px 3px 3px whitesmoke;
+}
+
+
+/* Sections inside the farmer edit section 
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/* 1. Contact Information */
+
+
+/* 1.Contact Information*/
+
+.farmer-fieldset{
+    border: 1px solid var(--breeze-in-june);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.gap{
+    margin: 10px;
+}
+
+/* add number */
+#farmer-contact-information-add-number{
+    font-size: large;
+    background-color: inherit;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--breeze-in-june);
+
+}
+#farmer-contact-information-add-number:active{
+    box-shadow: 0px 0px 0px teal;
+}
+
+#farmer-description{
+    width: 300pt;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+
+/* 2. Farmining Information */
+
+
+
+/*--------------------------------------------------------------------------------*/
+/* 3. Address Infromation. */
+
+#farmer-address-line{
+    width: 270pt;
+}

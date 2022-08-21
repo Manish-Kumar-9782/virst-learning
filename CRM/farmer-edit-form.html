@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>farmer-edit-form</title>
+
+        <link rel="stylesheet" href="Styles/farmer-edit-form.css">
+        <link rel="stylesheet" href="Styles/common.css">
+
+        <style>
+            .farmer-edit-form-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <div class="farmer-edit-form-container">
+
+            <div id="farmer-edit-form-main-container">
+
+                <header id="farmer-profile-header">
+                    <h1>Farmer Profile</h1>
+                    <button id="farmer-edit-profile-close-button">X</button>
+                </header>
+
+                <form action="#" name="farmer-profile-form" id="farmer-profile-form">
+
+                    <fieldset id="farmer-contact-information" class="farmer-fieldset">
+                        
+                        <legend><b>Contact Infromation</b></legend>
+                        <input type="text" class="gap" placeholder="Phone Number" id="farmer-phone-number" name="farmer-phone-number">
+
+                        <!-- A select option to select the language -->
+                        <select name="languages" id="languages" class="gap">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                        </select>
+
+                        <!-- A checkbox to show that farmer have smartphone or not. -->
+                        <input type="checkbox" id="is-smart-phone"  name="is-smart-phone" value="True">
+                        <label for="is-smart-phone">SmartPhone Available</label>
+
+                        <button id="farmer-contact-information-add-number" class="gap">+ Add Number</button>
+                        <br>
+                        <input type="text" class="gap" id="first-name" name="first-name" placeholder="First Name">
+                        <input type="text" class="gap" id="mid-name" name="mid-name" placeholder="Middle Name">
+                        <input type="text" class="gap" id="last-name" name="last-name" placeholder="Last Name">
+
+
+                        <!-- farmer type -->
+                        <br>
+                        <select name="farmer-type" id="farmer-type" class="gap" required>
+                            <option value="" class="option-placeholder">Farmer Type</option>
+                            <option value="#">type1</option>
+                            <option value="#">type2</option>
+                            <option value="#">type3</option>
+                            <option value="#">type4</option>
+                        </select>
+
+                        <!-- farmer project type -->
+                        <select name="farmer-project-type" id="farmer-project-type" class="gap"  required>
+                            <option value="" class="option-placeholder">Project Type</option>
+                            <option value="#">project-type1</option>
+                            <option value="#">project-type2</option>
+                            <option value="#">project-type3</option>
+                            <option value="#">project-type4</option>
+                        </select>
+
+                        <!-- farmer age -->
+                        <input type="number" class="gap" id="farmer-age" name="farmer-age" min="18" max="80" placeholder="Age">
+                        <input type="text" id="farmer-description" name="farmer-description" class="gap" placeholder="Description" required>
+
+                    </fieldset>
+
+                    <!-- Farmining Information fieldset -->
+                    <fieldset id="farmer-farmining-information" class="farmer-fieldset">
+                        <legend><b>Farmining information</b></legend>
+
+                        <!-- irrigation source -->
+                        <select name="farmer-irrigation-source" id="farmer-irrigation-source" class="gap" required>
+                            <option value="" class="option-placeholder">Irrigation Source</option>
+                            <option value="#">Irrigation Source 1</option>
+                            <option value="#">Irrigation Source 2</option>
+                            <option value="#">Irrigation Source 3</option>
+                            <option value="#">Irrigation Source 4</option>
+                        </select>
+
+                        <!-- irrigation type -->
+
+                        <select name="farmer-irrigation-type" id="farmer-irrigation-type" class="gap" required>
+                            <option value="" class="option-placeholder">Irrigation Type</option>
+                            <option value="#">Irrigation Type 1</option>
+                            <option value="#">Irrigation Type 2</option>
+                            <option value="#">Irrigation Type 3</option>
+                            <option value="#">Irrigation Type 4</option>
+                        </select>
+
+                        <!-- farmer crops  -->
+                        <select name="farmer-crops" id="farmer-crops" class="gap" required >
+                            <option value="" class="option-placeholder">Select Crops</option>
+                            <option value="#">Crop1</option>
+                            <option value="#">Crop2</option>
+                            <option value="#">Crop3</option>
+                            <option value="#">Crop4</option>
+                        </select>
+
+                        <br>
+
+                        <select name="dream-kisan-reference" id="dream-kisan-reference" class="gap">
+
+                            <option value="" class="option-placeholder">Heard about Dream Kisam</option>
+                            <option value="#">Social Media</option>
+                            <option value="#">Another Farmer</option>
+                            <option value="#">YouTube</option>
+                            <option value="#">Facebook</option>
+                            <option value="#">Other</option>
+                        </select>
+
+                        <div class="merge gap" style="display: inline-block;">
+                            <label for="landholding" >Landholding</label>
+                            <input type="number" placeholder="Units" min="0">
+                        </div>
+
+                        <div id="farmer-other-information" class="merge gap" style="display: block;">
+                            <label for="">Other Infromation</label>
+                            <input id="farmer-tractor" class="gap merge" name="farmer-tractor" type="checkbox" value="True">
+                            <label for="farmer-tractor">Tractor</label>
+
+                            <input id="farmer-crop-insurance" class="gap merge" name="farmer-crop-insurance" type="checkbox" value="True" >
+                            <label for="farmer-crop-insurance">Crop Insurance</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="farmer-address-information" class="farmer-fieldset">
+                        <legend><b>Address-Information</b></legend>
+
+                        <!-- Address line -->
+                        <input type="text" id="farmer-address-line" name="farmer-address-line" class="gap" placeholder="Address line" required>
+                        <!--Village Name-->
+                        <input type="text" id="farmer-village-name" name="farmer-village-name" class="gap" placeholder="Village Name" required>
+                        <!-- Thasil -->
+                        <input type="text" id="farmer-tehsil" name="farmer-tehsil" class="gap" placeholder="Tehsil Name">
+                        <br>
+                        <!-- Street/Landmark -->
+                        <input type="text" id="farmer-street-landmark" name="farmer-street-landmark" class="gap" placeholder="Street/Landmark">
+                        <!-- Street/Landmark -->
+                        <input type="text" id="farmer-City-town" name="farmer-city-town" class="gap" placeholder="City/Town">
+                        <!-- District -->
+                        <input type="text" id="farmer-district" name="farmer-district" class="gap" placeholder="District">
+                        <!-- City/Town -->
+                        <input type="text" id="farmer-state" name="farmer-state" class="gap" placeholder="State">
+
+                        <br>
+                        <!-- Post Office -->
+                        <input type="text" id="farmer-post-office" name="farmer-post-office" class="gap" placeholder="Post Office">
+                        <!-- Pincode -->
+                        <input type="text" id="farmer-address-pincode" name="farmer-address-pincode" class="gap" placeholder="Pincode">
+
+
+
+                    </fieldset>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
