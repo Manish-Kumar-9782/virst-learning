@@ -107,11 +107,19 @@
     background-color: var(--rarified-air);
 }
 
-#farmer-profile-content-submit:hover , #farmer-profile-content-submit:focus, #farmer-profile-content-submit:active{
+#farmer-profile-content-submit[type=submit]:hover{
     background-color: var(--azure-green-blue);
     color: var(--rarified-air);
-    border: 10px groove var(--rarified-air);
+    border: 1px groove var(--rarified-air);
     border-color: var(--rarified-air);
-    outline: 0px solid;
-    outline-color: var(--rarified-air);
+    
+}
+
+#farmer-profile-content-submit[type=submit]:active{
+    box-sizing: border-box;
+    background-color: var(--azure-green-blue);
+    color: var(--rarified-air);
+    border: 2px inset var(--rarified-air);
+    border-color: var(--rarified-air);
+    
 }

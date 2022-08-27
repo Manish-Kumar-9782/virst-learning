@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+
+        <!-- adding font awesome library cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <style>
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: lightgray;
+                
+            }
+
+            .dash-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* border: 1px solid; */
+            }
+
+            .main-dashboard-container{
+                display: flex;
+            }
+
+            .sidebar{
+                flex: 1;
+                box-shadow: 3px 3px 5px  lightslategray;
+                border-radius: 5px;
+            }
+
+
+
+            .dashboard-cards{
+                flex: 4;
+                display: grid;
+                grid-template-columns: auto auto;
+                height: 300px;
+            }
+
+            .card{
+
+                border: 1px solid whitesmoke;
+                border-radius: 10px;
+                margin: 5px;
+                padding: 10px;
+                background-color: whitesmoke;
+                box-shadow: 3px 3px 5px  lightslategray;
+                color: rgb(93, 111, 129);
+
+
+            }
+
+            .card-head-group{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .card-head-group > *{
+                margin: 5px;
+            }
+
+            .card-mid-group{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .card-mid-group .content{
+                flex: 1;
+                margin: 0px 10px;
+            }
+
+            /* content vertical separator */
+            .sep{
+                position: relative;
+                
+            }
+
+            .sep::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background-color: lightslategray;
+            }
+
+
+            .card-mid-group .content{
+                text-align: center;
+            }
+
+            .rem-3{
+                font-size: 3rem;
+                margin: 0px;
+                margin-bottom: 1px;
+                padding: 0px;
+            }
+
+            .rem-3 .fa-indian-rupee-sign{
+                margin: 0px;
+                font-size: 90%;
+            }
+
+            .mar-0{
+                margin: 0px;
+            }
+
+            .rem-icon{
+                color: lightslategray;
+                /* border: 1px solid red; */
+                font-size: 1.6rem;
+                margin-right: 5px;
+            }
+            .svg-icon{
+                color: lightslategray;
+                width: 1.6rem;
+                margin-right: 6px;
+                fill: lightslategray;
+            }
+
+
+            .card-footer{
+                text-align: center;
+            }
+
+            .flex-card{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0px 10px;
+                
+            }
+
+            .flex-card > div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                /* border: 1px solid; */
+
+                height: 95%;
+            }
+
+            .card-footer{
+                justify-self: flex-end;
+                margin-top: 5px;
+            }
+
+            /* Future Orders Card section */
+
+            #Future-Orders {
+                justify-content: space-between;
+                margin: 4px;
+                padding: 0px;
+            }
+
+            #Future-Orders .card-left-section{
+                flex: 2;
+                align-items: flex-start;
+                padding-left: 10px;
+            }
+
+            #Future-Orders .card-right-section{
+                flex: 1;
+                background-color: rgb(210, 240, 250);
+                /* margin-left: 0px; */
+                text-align: center;
+                height: 100%;
+            }
+
+
+            /* zero-vgap to make margin 0 in b/w the elements. */
+            .zero-vgap > *{
+                margin-top: 0px;
+                margin-bottom: 0px;
+                
+            }
+
+            .zero-vgap{
+                margin: 30px 0px;
+            }
+
+            /* round class to make a circular border */
+            
+
+        </style>
+
+    </head>
+    
+    <body>
+
+        <header class="dash-header">
+            <div class="left">
+                <h3>Welcome,</h3>
+                <h4>Manish Kumar</h4>
+            </div>
+
+            <div class="right">
+                <p>Last Refreshed at:</p>
+            </div>
+        </header>
+
+        <!-- ------------------------------------------------------- -->
+        <!-- ------------------------------------------------------- -->
+
+        <div class="main-dashboard-container">
+
+            <div class="sidebar">
+            
+            </div>
+    
+            <!-- dashboard-cards -->
+
+            <div class="dashboard-cards">
+    
+                <div id="Referrals" class="card">
+    
+                    <div class="card-head-group">
+                        <p><i class="fa-solid fa-chart-line rem-icon"></i> Referal <i class="fa-regular fa-circle-question"></i></p>
+                        
+                        <button>Today</button>
+                    </div>
+
+                    <div class="card-mid-group">
+
+                        <div class="content">
+                            <p class="rem-3">0 / 0</p>
+                            <p>Referred farmer who ordered from us</p>
+                        </div>
+
+                        <div class="content sep">
+                            <p class="rem-3"><i class="fa-solid fa-indian-rupee-sign"></i> 0</p>
+                            <p>Referral Revenue</p>
+                        </div>
+
+                    </div>
+    
+                </div>
+
+                <!-- Orders -->
+                
+                <div id="Orders" class="card">
+        
+                    <div class="card-head-group">
+                        <p><i class="fa-solid fa-chart-line rem-icon"></i> Order Related <i class="fa-regular fa-circle-question"></i></p>
+                        <button>Today</button>
+                    </div>
+
+                    <div class="card-mid-group">
+
+                        <div class="content">
+                            <p class="rem-3">0</p>
+                            <p>Net Orders Confirmed</p>
+                        </div>
+
+                        <div class="content sep">
+                            <p class="rem-3"><i class="fa-solid fa-indian-rupee-sign"></i> 0</p>
+                            <p>Net Revenue Generated</p>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <p><i class="fa-regular fa-circle-question"></i> Avg. ticket Size:  <i class="fa-solid fa-indian-rupee-sign "></i> 0</p>
+                    </div>
+        
+                </div>
+
+                <!-- Future-Orders -->
+        
+                <div id="Future-Orders" class="card flex-card">
+        
+                    <div class="card-left-section">
+                        
+                        <div class="card-head-group">
+                            <p><i class="fa-regular fa-calendar rem-icon"></i> Future Orders <i class="fa-regular fa-circle-question"></i></p>
+                            <button>Today</button>
+                        </div>
+
+                        <div class="orders-created">
+                            <p>No orders Created</p>
+                        </div>
+
+                    </div>
+                    
+                    <div class="card-right-section">
+
+                        <p class="rem-3">0%</p>
+                        <p>of the total future orders confirmed</p>
+
+                    </div>
+        
+                </div>
+
+                <!-- Returns -->
+        
+                <div id="Returns"  class="card flex-card">
+        
+                    <div class="returns-months card-left-section">
+                        <div class="card-head-group">
+                            <p><i class="fa-solid fa-rotate-left rem-icon"></i> Returns <i class="fa-regular fa-circle-question"></i></p>
+                            <p>Month till date</p>
+                        </div>
+
+                         <div class="card-mid-group">
+                            <div class="content zero-vgap">
+                                <p class="rem-3">29%</p>
+                                <p>x/y orders returned</p>
+                            </div>
+                         </div>
+
+                         <div class="card-footer zero-vgap">
+                            <p>35%</p>
+                            <p>Last Month</p>
+                         </div>
+                    </div>
+
+                    <div class="returns-today card-right-section sep">
+                        <div class="card-head-group">
+                            <p><i class="fa-solid fa-rotate-left rem-icon"></i>  Returns Revenue  <i class="fa-regular fa-circle-question"></i></p>
+                            <p>Today</p>
+                        </div>
+
+                        <div class="card-mid-group zero-vgap">
+
+                            <div class="content">
+                                <p class="rem-3"><i class="fa-solid fa-indian-rupee-sign"></i>123456</p>
+                            </div>
+                        </div>
+
+                        <div class="card-footer zero-vgap">
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i>1234566</p>
+                            <p>Last Month</p>
+                        </div>
+
+                    </div>
+        
+                </div>
+
+                <!-- Categories -->
+        
+                <div class="card">
+        
+                    <div class="card-head-group">
+                        <p><i class="fa-solid fa-chart-pie rem-icon"></i> Category  <i class="fa-regular fa-circle-question"></i></p>
+                        <button>Today</button>
+                    </div>
+
+                    <div class="card-mid-group">
+                        <div class="content">
+                            <p>No Orders created in any of the Categories</p>
+                        </div>
+                    </div>
+        
+                </div>
+
+                <!-- Discounts -->
+        
+                <div class="card">
+        
+                    <div class="card-head-group">
+                        <p> <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 35 35"><path d="M22.33,34.63a10.86,10.86,0,0,1-3.07-.6,9.32,9.32,0,0,0-2.25-.5,10.21,10.21,0,0,0-2.17.35c-1.49.36-3.17.77-4.75.06S7.7,31.7,7,30.35a8.93,8.93,0,0,0-1.17-1.86A9,9,0,0,0,4,27.13c-1.28-.79-2.72-1.69-3.31-3.24S.54,20.7,1,19.27A9.39,9.39,0,0,0,1.47,17a9,9,0,0,0-.35-2.17c-.36-1.48-.77-3.16-.06-4.75S3.3,7.7,4.65,7A8.93,8.93,0,0,0,6.51,5.82,9.32,9.32,0,0,0,7.87,4C8.66,2.67,9.56,1.23,11.11.64S14.3.54,15.74,1a9.22,9.22,0,0,0,2.25.5,10.19,10.19,0,0,0,2.17-.36c1.48-.35,3.17-.76,4.75-.05A7.21,7.21,0,0,1,28,4.65a8.93,8.93,0,0,0,1.17,1.86,9,9,0,0,0,1.87,1.36c1.28.79,2.72,1.69,3.31,3.24s.1,3.19-.33,4.63a9.32,9.32,0,0,0-.5,2.25,9,9,0,0,0,.35,2.17c.36,1.49.77,3.16.06,4.75h0c-.71,1.58-2.24,2.39-3.59,3.1a9.3,9.3,0,0,0-1.87,1.17,9.41,9.41,0,0,0-1.35,1.87c-.79,1.28-1.69,2.72-3.24,3.31A4.28,4.28,0,0,1,22.33,34.63ZM16.92,31h.16a11.34,11.34,0,0,1,2.9.6A5.34,5.34,0,0,0,23,32c.76-.28,1.36-1.26,2-2.29a11.71,11.71,0,0,1,1.77-2.37,11.31,11.31,0,0,1,2.41-1.56,5.28,5.28,0,0,0,2.48-1.92h0a5.32,5.32,0,0,0-.2-3.13A10.49,10.49,0,0,1,31,17.92a11.5,11.5,0,0,1,.6-2.91A5.29,5.29,0,0,0,32,12c-.29-.76-1.26-1.36-2.29-2a11.71,11.71,0,0,1-2.37-1.77A11.31,11.31,0,0,1,25.8,5.82a5.34,5.34,0,0,0-1.92-2.48,5.32,5.32,0,0,0-3.13.2A10.11,10.11,0,0,1,17.92,4,11.5,11.5,0,0,1,15,3.37,5.29,5.29,0,0,0,12,3c-.76.29-1.36,1.26-2,2.29A11.71,11.71,0,0,1,8.23,7.64,11.31,11.31,0,0,1,5.82,9.2a5.34,5.34,0,0,0-2.48,1.92,5.32,5.32,0,0,0,.2,3.13A10.49,10.49,0,0,1,4,17.08,11.5,11.5,0,0,1,3.37,20,5.29,5.29,0,0,0,3,23c.29.76,1.26,1.36,2.29,2a11.71,11.71,0,0,1,2.37,1.77A11.31,11.31,0,0,1,9.2,29.18a5.34,5.34,0,0,0,1.92,2.48,5.34,5.34,0,0,0,3.13-.21A11.52,11.52,0,0,1,16.92,31Z"/><path d="M13.6 22.59a1.1 1.1 0 0 1-.78-1.87l7.83-7.87a1.1 1.1 0 1 1 1.56 1.56l-7.83 7.86A1.09 1.09 0 0 1 13.6 22.59zM21.16 24.12h0a2.92 2.92 0 0 1-2.08-.86 3 3 0 0 1 2.08-5h0a2.9 2.9 0 0 1 2.08.87 3 3 0 0 1 0 4.16h0A2.89 2.89 0 0 1 21.16 24.12zm0-3.69a.74.74 0 0 0-.52.22.75.75 0 0 0 0 1.06.73.73 0 0 0 .52.21h0a.72.72 0 0 0 .52-.21h0a.75.75 0 0 0 0-1.06A.73.73 0 0 0 21.16 20.43zM13.84 16.77a3.07 3.07 0 0 1-1.07-.2 3 3 0 0 1-1.67-3.81 2.94 2.94 0 0 1 3.8-1.68A2.94 2.94 0 0 1 15 16.52 3 3 0 0 1 13.84 16.77zm0-3.69a.8.8 0 0 0-.3.06.75.75 0 0 0 0 1.38.73.73 0 0 0 .56 0 .72.72 0 0 0 .39-.41h0a.74.74 0 0 0-.42-1A.58.58 0 0 0 13.84 13.08z"/></svg>
+                            Given  <i class="fa-regular fa-circle-question"></i></p>
+                        
+                        <!-- <p> <img class="svg-icon" src="Images/discount.svg" alt="discount">
+                            Given  <i class="fa-regular fa-circle-question"></i></p> -->
+                        <p>Today</p>
+                    </div>
+
+                   <div class="card-mid-group">
+                        <div class="content">
+                            <p class="rem-3"><i class="fa-solid fa-indian-rupee-sign"></i>0</p>
+                        </div>
+                   </div>
+
+                    <div class="card-footer flex-card">
+                        <div class="zero-vgap">
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i>12</p>
+                            <p>Yesterday</p>
+                        </div>
+                        <div class="zero-vgap">
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i>123</p>
+                            <p>This Month</p>
+                        </div>
+                        <div class="zero-vgap">
+                            <p><i class="fa-solid fa-indian-rupee-sign"></i>12345</p>
+                            <p>Last Month</p>
+                        </div>
+                    </div>
+        
+                </div>
+    
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
